@@ -1,9 +1,7 @@
 <html>
-	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<head>
-		<title>
-			Accedi - Robot E-corp
-		</title>
+		<title>Accedi - Robot E-corp</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
