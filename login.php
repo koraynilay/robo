@@ -4,18 +4,21 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<form id='form' action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<label class='text-label' for='email'>Nome Utente</label>
 			<input class='text-field' type='text'name='email' placeholder="Inserisci il nome utente">
+			<br>
 			<label class='text-label' for='pass'>Password</label>
 			<input class='text-field' type='text'name='pass' placeholder="Inserisci la password">
+			<br>
 			<input class='button-form' type='submit' name='login' value='Accedi'>
+			<br>
 			<label for='register'>Nuovo?</label>
 			<input class='button-form' type='submit' name='register' value='Registrati'>
 		</form>
 	</body>
 <?php
-	if(isset($_POST("login")) {
+	if(isset($_POST["login"])) {
 		session_start();
 		include 'cred_users.php';
 		//echo $host." ".$user." ".$pass." ".$database;
@@ -43,7 +46,7 @@
 
 		mysqli_close($l);
 	}
-	else if(isset($_POST("register")) {
+	else if(isset($_POST["register"])) {
 		header("Location: ./register.php");
 	}
 ?>
