@@ -1,7 +1,8 @@
 <html>
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<head>
 		<title>
-			ciao
+			Accedi - Robot E-corp
 		</title>
 	</head>
 	<body>
