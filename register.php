@@ -6,7 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<form class='form' id='reg-form' action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<label class='text-label' for='name'>Nome e Cognome</label>
+			<input class='text-field' type='text'name='name' placeholder="Inserisci il tuo nome e cognome">
 			<label class='text-label' for='email'>E-mail</label>
 			<input class='text-field' type='text'name='email' placeholder="Inserisci la tua e-mail">
 			<label class='text-label' for='pass'>Password</label>
@@ -20,6 +22,7 @@
 	</body>
 <?php
 	if(isset($_POST("register")) {
+		//TODO register
 		session_start();
 		include 'cred_users.php';
 		//echo $host." ".$user." ".$pass." ".$database;
