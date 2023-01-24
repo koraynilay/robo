@@ -1,6 +1,7 @@
 CREATE TABLE users (
     id INT,
     name VARCHAR(255),
+    email VARCHAR(255),
     address VARCHAR(255),
     hashpass VARCHAR(255),
 
