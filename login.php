@@ -1,53 +1,101 @@
-<html>
-	<head>
-		<title>Accedi - Robot E-corp</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	</head>
-	<body>
-		<form class='form' id='log-form' action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-			<label class='text-label' for='email'>E-mail</label>
-			<input class='text-field' type='text'name='email' placeholder="Inserisci il nome utente">
-			<br>
-			<label class='text-label' for='pass'>Password</label>
-			<input class='text-field' type='text'name='pass' placeholder="Inserisci la password">
-			<br>
-			<input class='button-form' type='submit' name='login' value='Accedi'>
-			<br>
-			<label for='register'>Nuovo?</label>
-			<input class='button-form' type='submit' name='register' value='Registrati'>
-		</form>
-	</body>
-<?php
-	if(isset($_POST["login"])) {
-		session_start();
-		include 'cred_users.php';
-		//echo $host." ".$user." ".$pass." ".$database;
-		$l = new mysqli($host, $user, $pass, $database) or die("ciao");
-		//echo "ciao2";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
 
-		if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Member Login
+					</span>
 
-		$login_user = $_POST["email"];
-		$login_pass = hash("sha256", $_POST["pass"]);
-		//echo "<br>";
-		//echo $login_user;
-		//echo $login_pass;
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-		$q = $l->prepare('SELECT * FROM users WHERE email = ? AND password = ?');
-		$q->bind_param('ss',$login_user,$login_pass);
-		if($q->execute()) {
-			while($r = $q->get_result()->fetch_assoc()) {
-				$_SESSION["logged"] = true;
-				$_SESSION["user"] = $login_user;
-				header("Location: dash.php");
-			}
-			echo "Username o password errati";
-		}else echo "error";
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
 
-		mysqli_close($l);
-	}
-	else if(isset($_POST["register"])) {
-		header("Location: ./register.php");
-	}
-?>
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
 </html>
