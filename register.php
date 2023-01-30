@@ -78,7 +78,7 @@
 	</script>
 	<script src="assets/js/main.js"></script>
 <?php
-	if(isset($_POST("register"))) {
+	if(isset($_POST["register"])) {
 		//TODO register
 		session_start();
 		include 'cred_users.php';
@@ -107,7 +107,7 @@
 
 		mysqli_close($l);
 	}
-	else if(isset($_POST("login"))) {
+	else if(isset($_POST["login"])) {
 		header("Location: ./login.php");
 	}
 ?>
