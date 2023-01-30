@@ -94,7 +94,8 @@
 	  	while($r = $q->get_result()->fetch_assoc()) {
 	  		$_SESSION["logged"] = true;
 	  		$_SESSION["user"] = $login_user;
-	  		header("Location: dash.php");
+	  		header("Location: index.html");
+			echo "<script type='text/javascript'>alert('ciao');</script>";
 	  	}
 	  	echo "Username o password errati";
 	  	echo "<script type='text/javascript'>alert('Username o password errati');</script>";
