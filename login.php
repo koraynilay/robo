@@ -24,7 +24,7 @@
 					<img src="assets/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -73,5 +73,33 @@
 	</script>
 	<script src="assets/js/main.js"></script>
 </body>
-
+<?php
+	session_start();
+	include 'cred_users.php';
+	//echo $host." ".$user." ".$pass." ".$database;
+	$l = new mysqli($host, $user, $pass, $database) or die("ciao");
+	//echo "ciao2";
+	
+	if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
+	
+	$login_user = $_POST["email"];
+	$login_pass = hash("sha256", $_POST["pass"]);
+	//echo "<br>";
+	//echo $login_user;
+	//echo $login_pass;
+	
+	$q = $l->prepare('SELECT * FROM users WHERE email = ? AND hashpass = ?');
+	$q->bind_param('ss',$login_user,$login_pass);
+	if($q->execute()) {
+	  	while($r = $q->get_result()->fetch_assoc()) {
+	  		$_SESSION["logged"] = true;
+	  		$_SESSION["user"] = $login_user;
+	  		header("Location: dash.php");
+	  	}
+	  	echo "Username o password errati";
+	  	echo "<script type='text/javascript'>alert('Username o password errati');</script>";
+	}else echo "error";
+	
+	mysqli_close($l);
+?>
 </html>

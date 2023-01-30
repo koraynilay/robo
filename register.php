@@ -97,9 +97,9 @@
 	$q = $l->prepare('INSERT INTO users(name, email, hashpass) VALUES(?, ?, ?)');
 	$q->bind_param('sss',$login_name,$login_user,$login_pass);
 	if($q->execute()) {
-		echo "<script type='text/javascript'>alert('ciao');</script>";
-	}else
-		echo "<script type='text/javascript'>alert('asa');</script>";
+		//echo "<script type='text/javascript'>alert('ciao');</script>";
+	}//else
+		//echo "<script type='text/javascript'>alert('asa');</script>";
 
 
 	mysqli_close($l);
