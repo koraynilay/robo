@@ -29,7 +29,7 @@
 						<input class="input100" type="text" name="email" placeholder="First and last name">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa-solid fa-user" aria-hidden="true"></i>
 						</span>
 					</div>
 
