@@ -25,7 +25,7 @@
 						Member Creation
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "First and last name is required: ex@abc.xyz">
+					<div class="wrap-input100 validate-input" data-validate = "First and last name is required">
 						<input class="input100" type="text" name="email" placeholder="First and last name">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
