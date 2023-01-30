@@ -78,37 +78,30 @@
 	</script>
 	<script src="assets/js/main.js"></script>
 <?php
-	if(isset($_POST["register"])) {
-		//TODO register
-		session_start();
-		include 'cred_users.php';
-		//echo $host." ".$user." ".$pass." ".$database;
-		$l = new mysqli($host, $user, $pass, $database) or die("ciao");
-		//echo "ciao2";
+	//TODO register
+	session_start();
+	include 'cred_users.php';
+	//echo $host." ".$user." ".$pass." ".$database;
+	$l = new mysqli($host, $user, $pass, $database) or die("ciao");
+	//echo "ciao2";
 
-		if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
+	if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
 
-		$login_user = $_POST["email"];
-		$login_pass = hash("sha256", $_POST["pass"]);
-		//echo "<br>";
-		//echo $login_user;
-		//echo $login_pass;
+	$login_name = $_POST["name"];
+	$login_user = $_POST["email"];
+	$login_pass = hash("sha256", $_POST["pass"]);
+	//echo "<br>";
+	//echo $login_user;
+	//echo $login_pass;
 
-		$q = $l->prepare('SELECT * FROM users WHERE email = ? AND password = ?');
-		$q->bind_param('ss',$login_user,$login_pass);
-		if($q->execute()) {
-			while($r = $q->get_result()->fetch_assoc()) {
-				$_SESSION["logged"] = true;
-				$_SESSION["user"] = $login_user;
-				header("Location: dash.php");
-			}
-			echo "Username o password errati";
-		}else echo "error";
+	$q = $l->prepare('INSERT INTO users(name, email, hashpass) VALUES(?, ?, ?)');
+	$q->bind_param('sss',$login_name,$login_user,$login_pass);
+	if($q->execute()) {
+		echo "<script type='text/javascript'>alert('ciao');</script>";
+	}else
+		echo "<script type='text/javascript'>alert('asa');</script>";
 
-		mysqli_close($l);
-	}
-	else if(isset($_POST["login"])) {
-		header("Location: ./login.php");
-	}
+
+	mysqli_close($l);
 ?>
 </html>
