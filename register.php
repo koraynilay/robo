@@ -25,8 +25,8 @@
 						Member Creation
 					</span>
 
-					<div class="wrap-input100">
-						<input class="input100" type="text" name="name" placeholder="First and last name">
+					<div class="wrap-input100" >
+						<input class="input100" type="text" name="name" placeholder="First and last name" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user" aria-hidden="true"></i>
