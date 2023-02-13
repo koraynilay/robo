@@ -368,6 +368,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   width: var(--size);
   height: var(--size);
+  z-index: -1;
   filter: blur(calc(var(--size) / 5));
   background-image: linear-gradient(rgba(55, 235, 169, 0.85), #5b37eb);
   animation: rotate var(--speed) var(--easing) alternate infinite;
