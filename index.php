@@ -15,7 +15,6 @@
       <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     </head>
     <body>
-    <div class="gradient"></div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
                 Robot
