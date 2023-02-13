@@ -46,10 +46,10 @@
               </form>
 	      	<?php
 			session_start();
-			if($_SESSION["logged"])
-				echo '<a class="btn-sm btn-link btn-lg active" role="button" aria-pressed="true">'.$_SESSION["user"].'</a>';
+			if(isset($_SESSION["logged"]) && $_SESSION["logged"])
+				echo '<a class="login-btn btn-sm btn-link btn-lg active" role="button" aria-pressed="true">'.$_SESSION["user"].'</a>';
 			else
-				echo '<a href="login.php" class="login-btn btn-sm btn-link btn-lg active" role="button" aria-pressed="true">Sign-in</a>';
+				echo '<a class="login-btn btn-sm btn-link btn-lg active" role="button" aria-pressed="true" href="login.php">Sign-in</a>';
 		?>
             </div>
           </nav>
