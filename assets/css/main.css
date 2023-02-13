@@ -168,8 +168,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #000000;
- 
+  background-color: #000000;
 }
 
 .wrap-login100 {
