@@ -10,11 +10,11 @@ body{
 }
 
 a, i, .navbar-brand:hover, .login-btn, .nav-link{
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .nav-link:hover, .login-btn:hover{
-    color: var(--red);
+    color: var(--red) !important;
 }
 
 .bg-dark{
