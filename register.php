@@ -90,6 +90,7 @@
 	$login_name = $_POST["name"];
 	$login_user = $_POST["email"];
 	$login_pass = hash("sha256", $_POST["pass"]);
+	if(!isset($login_name) || !isset($login_user) || !isset($login_pass)) return;
 	//echo "<br>";
 	//echo $login_user;
 	//echo $login_pass;
@@ -97,9 +98,9 @@
 	$q = $l->prepare('INSERT INTO users(name, email, hashpass) VALUES(?, ?, ?)');
 	$q->bind_param('sss',$login_name,$login_user,$login_pass);
 	if($q->execute()) {
-		//echo "<script type='text/javascript'>alert('ciao');</script>";
-	}//else
-		//echo "<script type='text/javascript'>alert('asa');</script>";
+		echo "<script type='text/javascript'>alert('Account creato con successo');</script>";
+	}else
+		echo "<script type='text/javascript'>alert('Errore');</script>";
 
 
 	mysqli_close($l);

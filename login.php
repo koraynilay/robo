@@ -84,6 +84,7 @@
 	
 	$login_user = $_POST["email"];
 	$login_pass = hash("sha256", $_POST["pass"]);
+	if(!isset($login_user) || !isset($login_pass)) return;
 	//echo "<br>";
 	//echo $login_user;
 	//echo $login_pass;
@@ -97,7 +98,6 @@
 	  		header("Location: index.html");
 			echo "<script type='text/javascript'>alert('ciao');</script>";
 	  	}
-	  	echo "Username o password errati";
 	  	echo "<script type='text/javascript'>alert('Username o password errati');</script>";
 	}else echo "error";
 	
