@@ -173,7 +173,6 @@ iframe {
 
 .wrap-login100 {
   width: 960px;
-  background: #fff;
   border-radius: 10px;
   overflow: hidden;
 
@@ -185,6 +184,13 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 177px 130px 33px 95px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*------------------------------------------------------------------
