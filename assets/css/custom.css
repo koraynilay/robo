@@ -9,7 +9,7 @@ body{
     background-repeat: no-repeat;
 }
 
-a, i, .navbar-brand:hover, .login-btn{
+a, i, .navbar-brand:hover, .login-btn, .nav-link{
     color: var(--white);
 }
 
