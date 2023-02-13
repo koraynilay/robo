@@ -12,9 +12,10 @@
 	    <link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
 	    <link rel="stylesheet" type="text/css" href="assets/css/util.css">
 	    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-darker bg-darker">
             <a class="navbar-brand" href="#">
                 Robot
                 <i class="fa fa-rocket"></i>
@@ -48,12 +49,12 @@
 			if($_SESSION["logged"])
 				echo '<a class="btn-sm btn-link btn-lg active" role="button" aria-pressed="true">'.$_SESSION["user"].'</a>';
 			else
-				echo '<a href="login.php" class="btn-sm btn-link btn-lg active" role="button" aria-pressed="true">Sign-in</a>';
+				echo '<a href="login.php" class="login-btn btn-sm btn-link btn-lg active" role="button" aria-pressed="true">Sign-in</a>';
 		?>
             </div>
           </nav>
           <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/popper.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+          <script src="assets/vendor/bootstrap/js/popper.js"></script>
+	        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

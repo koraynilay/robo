@@ -1,0 +1,13 @@
+body{
+    background-image: url(../images/bg/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a, i, .navbar-brand:hover{
+    color: white;
+}
+
+.nav-link:hover, .login-btn:hover{
+    color: red;
+}
