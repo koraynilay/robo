@@ -25,3 +25,8 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 .dropdown-item{
     color: var(--black) !important;
 }
+
+.dropdown-item{
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+}
