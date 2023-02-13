@@ -17,3 +17,6 @@ a, i, .navbar-brand:hover, .login-btn{
     color: var(--red);
 }
 
+.navbar-toggler{
+    color: #ffffff;
+}
