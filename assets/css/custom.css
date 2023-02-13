@@ -16,3 +16,7 @@ a, i, .navbar-brand:hover, .login-btn{
 .nav-link:hover, .login-btn:hover{
     color: var(--red);
 }
+
+.navbar{
+    background-color: black;
+}
