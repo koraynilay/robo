@@ -15,7 +15,7 @@
       <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-darker bg-darker">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
                 Robot
                 <i class="fa fa-rocket"></i>
