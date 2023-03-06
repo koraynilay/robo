@@ -32,10 +32,11 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 /*========== FLEX ITEM LANDING PAGE =================*/
 
 .flexbox-container-landing{
+    position: relative;
     background: #e3e3e3;
     border: 2px solid black;
-    height: 300px;
-    width:740px;
+    height: 100%;
+    width:100%;
     display: flex;
     display: -webkit-flex;
     flex-flow: row nowrap;
@@ -47,6 +48,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }
 
 .flex-item-1, .flex-item-2{
+    position: relative;
     padding: 20px;
     width: 180px;
     height: 100px;
