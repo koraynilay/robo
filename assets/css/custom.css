@@ -28,34 +28,3 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: var(--black) !important;
     color: var(--white) !important;
 }
-
-/*========== FLEX ITEM LANDING PAGE =================*/
-
-.flex-container-landing{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    align-items: center;
-    -webkit-align-items: center;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-}
-
-.flex-item-1, .flex-item-2{
-    position: relative;
-    padding: 20px;
-    width: 180px;
-    height: 100px;
-}
-
-.flex-item-1{
-    background-color: red;
-}
-
-.flex-item-2{
-    background-color: green;
-}

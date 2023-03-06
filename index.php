@@ -56,10 +56,6 @@
 		?>
             </div>
           </nav>
-          <div class="flex-container-landing">
-            <div class="flex-item-1">1</div>
-            <div class="flex-item-2">2</div>
-          </div>
           <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
           <script src="assets/vendor/bootstrap/js/popper.js"></script>
 	        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
