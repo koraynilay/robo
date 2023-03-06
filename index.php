@@ -57,7 +57,8 @@
             </div>
           </nav>
           <div class="text">
-            <h1>We build robots<br>suitables for everyones</h1>
+            <h1>Join the revolution<br>with our robots</h1>
+            <h2>the perfect blend of technology<br> and efficiency<h2> 
           </div>
           <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
           <script src="assets/vendor/bootstrap/js/popper.js"></script>
