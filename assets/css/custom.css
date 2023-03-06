@@ -24,10 +24,6 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: var(--black) !important;
 }
 
-.nav-item, .dropdown{
-    background-color: var(--black) !important;
-}
-
 .dropdown-item{
     background-color: var(--black) !important;
     color: var(--white) !important;
@@ -37,8 +33,6 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 
 .flex-container-landing{
     position: relative;
-    background: #e3e3e3;
-    border: 2px solid black;
     height: 100%;
     width: 100%;
     display: flex;
