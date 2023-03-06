@@ -22,10 +22,6 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: black !important;
 }
 
-.dropdown-menu.show{
-    background-color: var(--black) !important;
-}
-
 .dropdown-item{
     background-color: var(--black) !important;
     color: var(--white) !important;
