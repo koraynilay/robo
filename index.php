@@ -27,16 +27,19 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item" active>
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item dropdown" active>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Products
+                      Products Category
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Industrial</a>
+                      <a class="dropdown-item" href="#">Gargening</a>
+                      <a class="dropdown-item" href="#">Cleaning</a>
+                      <a class="dropdown-item" href="#">Fun</a>
+                      <a class="dropdown-item" href="#">Photography</a>
+                      <a class="dropdown-item" href="#">Security</a>
                     </div>
                   </li>
               </ul>
