@@ -28,3 +28,11 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: var(--black) !important;
     color: var(--white) !important;
 }
+
+.text{
+    position: relative;
+    text-align: center;
+    text-decoration:solid;
+    top: -10%;
+    left: -40%;
+}

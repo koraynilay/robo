@@ -56,6 +56,9 @@
 		?>
             </div>
           </nav>
+          <div class="text">
+            <h1>We build robots<br>suitables for everyones</h1>
+          </div>
           <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
           <script src="assets/vendor/bootstrap/js/popper.js"></script>
 	        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
