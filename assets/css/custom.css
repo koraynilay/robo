@@ -15,7 +15,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }
 
 .nav-link:hover, .login-btn:hover{
-    background-color: var(--red) !important;
+    color: var(--red) !important;
 }
 
 .bg-dark{
@@ -23,7 +23,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }
 
 .dropdown-menu.show{
-    color: var(--black) !important;
+    background-color: var(--black) !important;
 }
 
 .dropdown-item{
