@@ -31,7 +31,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 
 /*========== FLEX ITEM LANDING PAGE =================*/
 
-.flexbox-container-landing{
+.flex-container-landing{
     position: relative;
     background: #e3e3e3;
     border: 2px solid black;
