@@ -15,7 +15,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }
 
 .nav-link:hover, .login-btn:hover{
-    color: var(--red) !important;
+    background-color: var(--red) !important;
 }
 
 .bg-dark{
