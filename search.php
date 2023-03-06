@@ -43,7 +43,7 @@
                     </div>
                   </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0" action="search.php">
+              <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
                 <input class="form-control mr-sm-2" type="search" name='search' placeholder="Search any product" aria-label="Search any product">
                 <button class="btn my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
               </form>
@@ -55,20 +55,30 @@
 			
 			if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
 			
-			print_r($_POST);
-			$ss = $_POST["search"];
+			//print_r($_POST);
+			$ss = '"%'.$_POST["search"].'%"';
 			if(!isset($ss)) return;
 			//echo "<br>";
 			//echo $login_user;
 			//echo $login_pass;
 			
-			$q = $l->prepare('SELECT * FROM products WHERE name LIKE "%?%"');
+			$q = $l->prepare('SELECT * FROM products WHERE name LIKE ?');
 			$q->bind_param('s',$ss);
+			print_r($q);
 			if($q->execute()) {
-				while($r = $q->get_result()->fetch_assoc()) {
-					echo $r;
+				echo $ss;
+				$ppp = $q->get_result();
+				print_r($ppp);
+				print_r($ppp->fetch_row());
+				echo $ss;
+				while($r = $ppp->fetch_assoc()) {
+					print_r($r);
+					echo $ss;
+					echo $r["id"];
 				}
+				echo $ss;
 			}else echo "error";
+			echo $ss;
 			
 			mysqli_close($l);
 		?>
