@@ -22,7 +22,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: black !important;
 }
 
-.dropdown-item{
+.dropdown-menu{
     color: var(--black) !important;
 }
 
