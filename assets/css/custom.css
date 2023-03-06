@@ -10,6 +10,8 @@ body{
     background-repeat: no-repeat;
 }
 
+/*========== NAVBAR =================*/
+
 a, i, .navbar-brand:hover, .login-btn, .nav-link{
     color: var(--white) !important;
 }
@@ -25,4 +27,35 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 .dropdown-item{
     background-color: var(--black) !important;
     color: var(--white) !important;
+}
+
+/*========== FLEX ITEM LANDING PAGE =================*/
+
+.flexbox-container-landing{
+    background: #e3e3e3;
+    border: 2px solid black;
+    height: 300px;
+    width:740px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+.flex-item-1, .flex-item-2{
+    padding: 20px;
+    width: 180px;
+    height: 100px;
+}
+
+.flex-item-1{
+    background-color: red;
+}
+
+.flex-item-2{
+    background-color: green;
 }
