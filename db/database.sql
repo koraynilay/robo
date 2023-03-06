@@ -7,9 +7,14 @@
 -- 	
 -- 	PRIMARY KEY (id)
 -- );
-
--- INSERT INTO `users` (`id`, `name`, `email`, `address`) VALUES
-
+-- 
+-- CREATE TABLE category(
+--     id INT, 
+--     name VARCHAR(255),
+-- 
+--     PRIMARY KEY (id)
+-- );
+-- 
 -- CREATE TABLE products(
 -- 	id INT,
 -- 	name VARCHAR(255),
@@ -20,6 +25,17 @@
 -- 	PRIMARY KEY (id),
 -- 	FOREIGN KEY (IdCategory) REFERENCES category(id)
 -- );
+
+-- INSERT INTO `users` (`id`, `name`, `email`, `address`) VALUES
+
+INSERT INTO `category` (`id`, `name`) VALUES
+	(1, 'industriali'),
+	(2, 'giardinaggio'),
+	(3, 'pulizia'),
+	(4, 'svago'),
+	(5, 'fotografia'),
+	(6, 'sicurezza')
+;
 
 INSERT INTO `products` (`id`, `name`, `weight`, `price`, `IdCategory`) VALUES
 	(1, 'Taidda 6DOF', 910, 119.52, 1),
@@ -45,20 +61,4 @@ INSERT INTO `products` (`id`, `name`, `weight`, `price`, `IdCategory`) VALUES
 	(16, 'Moorebot Scout', 350, 219.00, 6),
 	(17, 'SHENGANG Robot', 10, 217.67, 6),
 	(18, 'Truwelby Enabot Ebo SE', 280, 119.00, 6);
-;
-
--- CREATE TABLE category(
---     id INT, 
---     name VARCHAR(255),
--- 
---     PRIMARY KEY (id)
--- );
-
-INSERT INTO `category` (`id`, `name`) VALUES
-	(1, 'industriali'),
-	(2, 'giardinaggio'),
-	(3, 'pulizia'),
-	(4, 'svago'),
-	(5, 'fotografia'),
-	(6, 'sicurezza')
 ;
