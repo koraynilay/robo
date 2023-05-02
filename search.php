@@ -16,7 +16,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Robot
                 <i class="fa fa-rocket"></i>
                 E-corp
@@ -56,34 +56,62 @@
 			if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
 			
 			//print_r($_POST);
-			$ss = '"%'.$_POST["search"].'%"';
+			$ss = $_POST["search"];
 			if(!isset($ss)) return;
 			//echo "<br>";
 			//echo $login_user;
 			//echo $login_pass;
 			
-			$q = $l->prepare('SELECT * FROM products WHERE name LIKE ?');
-			$q->bind_param('s',$ss);
-			print_r($q);
-			if($q->execute()) {
-				echo $ss;
-				$ppp = $q->get_result();
-				print_r($ppp);
-				print_r($ppp->fetch_row());
-				echo $ss;
-				while($r = $ppp->fetch_assoc()) {
-					print_r($r);
-					echo $ss;
-					echo $r["id"];
-				}
-				echo $ss;
-			}else echo "error";
-			echo $ss;
-			
-			mysqli_close($l);
+			$q = $l->query('SELECT * FROM products INNER JOIN category ON products.IdCategory = category.id WHERE products.name LIKE "%'.$ss.'%"');
+#			$q = $l->prepare('SELECT * FROM products WHERE name LIKE CONCAT("%", ?, "%")');
+#			$q->bind_param('s',$ss);
+#			print_r($q);
+#			if($q->execute()) {
+#			#	echo $ss;
+#				$ppp = $q->get_result();
+#			#	print_r($ppp);
+#			#	print_r($ppp->fetch_row());
+#				echo "n1:" . $ppp->num_rows . "<br>";
+#				echo "t:" . gettype($ppp) . "<br>";
+#				echo $ss;
+#				while($r = $ppp->fetch_assoc()) {
+#					print_r($r);
+#					echo $ss;
+#					echo $r["id"];
+#				}
+#				echo $ss;
+#			}else echo "error".$q->error;
+#			$q->debugDumpParams();
+#			echo $ss;
 		?>
             </div>
           </nav>
+	  <div class='data mt-5'>
+		  <div class="p-3 pb-md-4 mx-auto text-center text-light">
+			  <h1 class="display-4 fw-normal">Search results for '<?php echo $ss;?>'</h1>
+		  </div>
+		  <div class="container overflow-hidden mt-5">
+			  <div class="row gy-4 gy-md-0 gx-xxl-5">
+			  <?php
+
+					while($r = $q->fetch_assoc()) {
+						echo '<div class="col-12 col-md-4">';
+						echo '<div class="card text-white bg-dark mb-3 border-light" style="width: 18rem;">';
+						echo '<div class="card-body p-5 pt-8 pt-xl-14 pt-xxl-20 pe-xxl-10">';
+						echo '<h5 class="card-title mb-3">'.$r["name"].'</h5>';
+						echo '<h6 class="card-subtitle mb-2 text-muted">'.$r["name"].'</h6>';
+						echo '<p class="card-text mb-4">sus</p>';
+						echo '<a class="btn btn-primary" href="#">69</a>';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
+					}
+					
+					mysqli_close($l);
+			  ?>
+			  </div>
+		  </div>
+	  </div>
           <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
           <script src="assets/vendor/bootstrap/js/popper.js"></script>
 	        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
