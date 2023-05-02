@@ -9,6 +9,8 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: none;
+    background-attachment: fixed;
+
 }
 
 /*========== NAVBAR =================*/
@@ -25,20 +27,13 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: var(--black) !important;
 }
 
-.dropdown-item{
+.dropdown-menu, .dropdown-item{
     background-color: var(--black) !important;
     color: var(--white) !important;
 }
 
-.text{
-    position: absolute;
-    backdrop-filter: blur(90px);
-    text-align: center;
-    font-size: 20vh;
-    text-decoration:solid;
-    top: 38%;
-    left: 34%;
-    color: white;
-    border-radius: 50px;
-    padding: 40px 20px 40px 20px;   
+.dropdown-item:hover{
+    color: var(--red) !important;
+	
 }
+

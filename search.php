@@ -88,15 +88,15 @@
           </nav>
 	  <div class='data mt-5'>
 		  <div class="p-3 pb-md-4 mx-auto text-center text-light">
-			  <h1 class="display-4 fw-normal">Search results for '<?php echo $ss;?>'</h1>
+			  <h3 class="display-4 fw-normal">Search results for '<?php echo $ss;?>'</h3>
 		  </div>
 		  <div class="container overflow-hidden mt-5">
 			  <div class="row gy-4 gy-md-0 gx-xxl-5">
 			  <?php
 
 					while($r = $q->fetch_assoc()) {
-						echo '<div class="col-12 col-md-4">';
-						echo '<div class="card text-white bg-dark mb-3 border-light" style="width: 18rem;">';
+						echo '<div class="col-3 col-md-4 mt-5">';
+						echo '<div class="card text-white bg-dark mb-3 border-light border-opacity-25 rounded-5" style="width: 18rem;">';
 						echo '<div class="card-body p-5 pt-8 pt-xl-14 pt-xxl-20 pe-xxl-10">';
 						echo '<h5 class="card-title mb-3">'.$r["name"].'</h5>';
 						echo '<h6 class="card-subtitle mb-2 text-muted">'.$r["name"].'</h6>';
