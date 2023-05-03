@@ -34,6 +34,4 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 
 .dropdown-item:hover{
     color: var(--red) !important;
-	
 }
-

@@ -56,13 +56,13 @@
 			if($l->connect_errno) throw new RuntimeException("no connect ".$l->connect_error);
 			
 			//print_r($_POST);
-			$ss = $_POST["search"];
+			$ss = $_REQUEST["cat"];
 			if(!isset($ss)) return;
 			//echo "<br>";
 			//echo $login_user;
 			//echo $login_pass;
 			
-			$q = $l->query('SELECT products.name, products.weight, products.price, category.name AS cat_name FROM products INNER JOIN category ON products.IdCategory = category.id WHERE products.name LIKE "%'.$ss.'%"');
+			$q = $l->query('SELECT products.name, products.weight, products.price FROM products INNER JOIN category ON products.IdCategory = category.id WHERE category.name = "'.$ss.'"');
 #			$q = $l->prepare('SELECT * FROM products WHERE name LIKE CONCAT("%", ?, "%")');
 #			$q->bind_param('s',$ss);
 #			print_r($q);
@@ -104,7 +104,7 @@
           </nav>
 	  <div class='data mt-5'>
 		  <div class="p-3 pb-md-4 mx-auto text-center text-light">
-			  <h3 class="display-5 fw-normal">Search results for '<?php echo $ss;?>'</h3>
+			  <h3 class="display-5 fw-normal"><?php echo $ss;?> robots</h1>
 		  </div>
 		  <div class="container overflow-hidden mt-5">
 			  <div class="row gy-4 gy-md-0 gx-xxl-5">
@@ -116,8 +116,7 @@
 								echo '<div class="card-body p-5 pt-8 pt-xl-14 pt-xxl-20 pe-xxl-10">';
 									echo '<h5 class="card-title mb-3">'.$r["name"].'</h5>';
 									echo '<h6 class="card-subtitle mb-2 text-muted">'.$r["price"].'€</h6>';
-									echo '<p class="card-text mb-4">'.$r["cat_name"].'</p>';
-									echo '<a class="btn btn-primary" href="cart.php?id='.$r["id"].'">Add to cart</a>';
+									echo '<a class="btn btn-primary" href="#">Add to cart</a>';
 								echo '</div>';
 							echo '</div>';
 						echo '</div>';

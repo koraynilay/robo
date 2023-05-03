@@ -88,12 +88,13 @@
 	//echo $login_user;
 	//echo $login_pass;
 	
-	$q = $l->prepare('SELECT * FROM users WHERE email = ? AND hashpass = ?');
+	$q = $l->prepare('SELECT id FROM users WHERE email = ? AND hashpass = ?');
 	$q->bind_param('ss',$login_user,$login_pass);
 	if($q->execute()) {
 	  	while($r = $q->get_result()->fetch_assoc()) {
 	  		$_SESSION["logged"] = true;
 	  		$_SESSION["user"] = $login_user;
+	  		$_SESSION["id"] = $r["id"];
 	  		header("Location: index.php");
 			echo "<script type='text/javascript'>alert('ciao');</script>";
 	  	}
