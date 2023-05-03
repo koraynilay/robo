@@ -107,11 +107,11 @@
 			  <h3 class="display-5 fw-normal"><?php echo $ss;?> robots</h1>
 		  </div>
 		  <div class="container overflow-hidden mt-5">
-			  <div class="row gy-4 gy-md-0 gx-xxl-5">
+			  <div class="row">
 			  <?php
 
 					while($r = $q->fetch_assoc()) {
-						echo '<div class="col-3 col-md-4 mt-5">';
+						echo '<div class="col mt-5">';
 							echo '<div class="card text-white bg-dark mb-3 border-light border-opacity-25 rounded-5" style="width: 18rem;">';
 								echo '<div class="card-body p-5 pt-8 pt-xl-14 pt-xxl-20 pe-xxl-10">';
 									echo '<h5 class="card-title mb-3">'.$r["name"].'</h5>';
