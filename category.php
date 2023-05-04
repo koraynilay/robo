@@ -85,20 +85,7 @@
 #			echo $ss;
 		?>
 		<?php
-				session_start();
-				if(isset($_SESSION["logged"]) && $_SESSION["logged"]) {
-					echo '<li class="nav-item dropdown" style="background-color:black !important" active>
-					    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-					echo '<i class="fa fa-user sus"></i>   ';
-					echo $_SESSION["user"];
-				    echo '</a>
-				    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				      <a class="dropdown-item" href="logout.php">Sign out</a>
-				    </div>
-                  </li>';
-				}
-				else
-					echo '<a class="login-btn btn-sm btn-link btn-lg active" role="button" aria-pressed="true" href="login.php">Sign-in</a>';
+			include 'account_stuff.php';
 		?>
             </div>
           </nav>
