@@ -43,10 +43,6 @@
                     </div>
                   </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
-                <input class="form-control mr-sm-2" type="search" name='search' placeholder="Search any product" aria-label="Search any product">
-                <button class="btn my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-              </form>
 		<?php
 			include 'cred_users.php';
 			//echo $host." ".$user." ".$pass." ".$database;
@@ -85,7 +81,7 @@
 #			echo $ss;
 		?>
 		<?php
-			include 'account_stuff.php';
+			include 'components/navbar/navbar.php';
 		?>
             </div>
           </nav>

@@ -43,10 +43,6 @@
                     </div>
                   </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
-                <input class="form-control mr-sm-2" type="search" name='search' placeholder="Search any product" aria-label="Search any product">
-                <button class="btn my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-              </form>
 		<?php
 			include 'cred_users.php';
 			//echo $host." ".$user." ".$pass." ".$database;
@@ -85,7 +81,7 @@
 #			echo $ss;
 		?>
 		<?php
-			include 'account_stuff.php';
+			include 'components/navbar/navbar.php';
 		?>
             </div>
           </nav>
@@ -96,22 +92,9 @@
 		  <div class="container overflow-hidden mt-5">
 			  <div class="row">
 			  <?php
-
-					while($r = $q->fetch_assoc()) {
-						echo '<div class="col mt-5">';
-							echo '<div class="card text-white bg-dark mb-3 border-light border-opacity-25 rounded-5" style="width: 18rem;">';
-								echo '<div class="card-body p-5 pt-8 pt-xl-14 pt-xxl-20 pe-xxl-10">';
-									echo '<h5 class="card-title mb-3">'.$r["name"].'</h5>';
-									echo '<h6 class="card-subtitle mb-2 text-muted">'.$r["price"].'€</h6>';
-									echo '<p class="card-text mb-4">'.$r["cat_name"].'</p>';
-									echo '<a class="btn btn-primary" href="#" onclick="alert(\'Funzione WIP\')">Add to cart</a>';
-									//echo '<a class="btn btn-primary" href="cart.php?id='.$r["id"].'">Add to cart</a>';
-								echo '</div>';
-							echo '</div>';
-						echo '</div>';
-					}
+				include 'components/card.php';
 					
-					mysqli_close($l);
+				mysqli_close($l);
 			  ?>
 			  </div>
 		  </div>
