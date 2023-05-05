@@ -85,9 +85,9 @@
 		?>
             </div>
           </nav>
-	  <div class='data mt-5'>
+	  <div class='data mt-5 container'>
 		  <div class="p-3 pb-md-4 mx-auto text-center text-light">
-			  <h3 class="display-5 fw-normal">Search results for '<?php echo $ss;?>'</h3>
+			  <h3 class="display-5 fw-normal sr-text">Search results for '<?php echo $ss;?>'</h3>
 		  </div>
 		  <div class="container overflow-hidden mt-5">
 			  <div class="row">

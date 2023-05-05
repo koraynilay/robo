@@ -8,6 +8,7 @@ body{
     background-image: url(../images/bg/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     overflow-x: none;
     background-attachment: fixed;
 
@@ -34,4 +35,20 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 
 .dropdown-item:hover{
     color: var(--red) !important;
+}
+
+.container {
+	backdrop-filter: blur(20px) saturate(120%) contrast(80%);
+	border-radius: 20px;
+}
+
+.row{
+	margin-left: 0% !important;
+	margin-right: 0% !important;
+}
+
+.sr-text {
+	padding-top: 2.5rem;
+	font-style: bold;
+	font-size: 3rem;
 }
