@@ -1,0 +1,8 @@
+Il nostro è un sito web di vendita di robot, con utenti (e quindi login), ricerca dei prodotti e pagine per ogni categoria.
+Il carrello è stato aggiunto, ma non è ancora funzionante (ci sarà un popup che dice "Funzione WIP" quando si prova ad usarlo).
+Non sono state ancora implementate diverse utente per b2b e b2c, con i diversi calcoli di IVA e garanzia.
+
+link al sito: http://infty.duckdns.org:8910/robo
+credenziali per testare il login:
+user: a@b.c
+pass: ciao
