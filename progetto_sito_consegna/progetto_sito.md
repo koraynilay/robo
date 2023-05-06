@@ -35,3 +35,6 @@ Pagina di ricerca
 <br>
 Pagina della categoria "Gardening" e menù del profilo in alto a destra
 ![cat](./2023-05-06_22-59-54.png)
+
+# Schema db:
+![designer](./robo.svg)
