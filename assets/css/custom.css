@@ -37,11 +37,6 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     color: var(--red) !important;
 }
 
-.container {
-	backdrop-filter: blur(20px) saturate(120%) contrast(80%);
-	border-radius: 20px;
-}
-
 .row{
 	margin-left: 0% !important;
 	margin-right: 0% !important;
