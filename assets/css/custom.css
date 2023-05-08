@@ -40,5 +40,5 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }
 
 .searchbar:hover{
-    border: 1px solid white;
+    border: 1px solid var(--white);
 }
