@@ -29,7 +29,7 @@
                 <li class="nav-item" active>
                   <a class="nav-link" href="index.php">Home</a>
                 </li>
-                <li class="nav-item dropdown" style="background-color:black !important" active>
+                <li class="nav-item dropdown" active>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Products Category
                     </a>
