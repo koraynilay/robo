@@ -33,7 +33,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Products Category
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="category.php?cat=Industrial">Industrial</a>
                       <a class="dropdown-item" href="category.php?cat=Gardening">Gargening</a>
                       <a class="dropdown-item" href="category.php?cat=Cleaning">Cleaning</a>
