@@ -28,10 +28,10 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     background-color: var(--black) !important;
 }*/
 
-.dropdown-menu, .dropdown-item{
-    /*background-color: var(--black) !important;*/
+/*.dropdown-menu, .dropdown-item{
+    background-color: var(--black) !important;
     color: var(--white) !important;
-}
+}*/
 
 .dropdown-item:hover{
     color: var(--red) !important;
