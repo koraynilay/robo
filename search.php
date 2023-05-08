@@ -90,7 +90,7 @@
 			  <h3 class="display-5 fw-normal sr-text">Search results for '<?php echo $ss;?>'</h3>
 		  </div>
 		  <div class="container overflow-hidden mt-5">
-			  <div class="row">
+		  	  <div class="row gy-4 gy-md-0 gx-xxl-5">
 			  <?php
 				include 'components/card.php';
 					
