@@ -24,19 +24,6 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
     color: var(--red) !important;
 }
 
-/*.bg-dark{
-    background-color: var(--black) !important;
-}*/
-
-/*.dropdown-menu, .dropdown-item{
-    background-color: var(--black) !important;
-    color: var(--white) !important;
-}*/
-
-.dropdown-item:hover{
-    color: var(--red) !important;
-}
-
 .row{
 	margin-left: 0% !important;
 	margin-right: 0% !important;
