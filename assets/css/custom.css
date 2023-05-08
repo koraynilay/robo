@@ -1,7 +1,6 @@
 :root{
     --red: #FF0000;
     --white: #ffffff;
-    --black: #000000;
 }
 
 body{
@@ -22,6 +21,11 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 
 .nav-link:hover, .login-btn:hover{
     color: var(--red) !important;
+}
+
+.dropdown-item:hover{
+    color: var(--red) !important;
+    background-color: #343a40 !important;
 }
 
 .row{
