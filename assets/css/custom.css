@@ -29,7 +29,7 @@ a, i, .navbar-brand:hover, .login-btn, .nav-link{
 }*/
 
 .dropdown-menu, .dropdown-item{
-    background-color: var(--black) !important;
+    /*background-color: var(--black) !important;*/
     color: var(--white) !important;
 }
 
