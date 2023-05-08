@@ -1,12 +1,12 @@
 <?php
 	session_start();
 	if(isset($_SESSION["logged"]) && $_SESSION["logged"]) {
-		echo '<li class="nav-item dropdown" style="background-color:black !important" active>
+		echo '<li class="nav-item dropdown bg-dark text-light accbar" active>
 		    <a class="nav-link dropdown-toggle" style="padding: 0.3rem !important; margin-right: 1rem !important;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 		echo '<i class="fa fa-user fa-lg sus"></i>   ';
 		echo $_SESSION["user"];
 	    echo '</a>
-	    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	    <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdownMenuLink">
 	      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Sign out</a>
 	    </div>
 	  </li>';

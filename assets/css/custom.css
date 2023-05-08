@@ -3,6 +3,10 @@
     --white: #ffffff;
 }
 
+html{
+	overflow-x:hidden;
+}
+
 body{
     background-image: url(../images/bg/bg.jpg);
     background-size: cover;
